@@ -18,8 +18,9 @@
     "prettier": "2.7.1"
   },
   "scripts": {
-    "prepare": "husky install",
-    "lint": "npx lerna run lint"
+    "lint": "yarn lerna run lint",
+    "prettier": "yarn lerna run prettier",
+    "prepare": "husky install"
   },
   "dependencies": {
     "nx": "^14.8.2"
