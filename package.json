@@ -20,7 +20,8 @@
   "scripts": {
     "lint": "yarn lerna run lint",
     "prettier": "yarn lerna run prettier",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "yarn workspace app start"
   },
   "dependencies": {
     "nx": "^14.8.2"
