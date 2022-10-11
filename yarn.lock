@@ -4010,6 +4010,12 @@
   "resolved" "file:packages/app"
   "version" "0.1.0"
   dependencies:
+    "@emotion/react" "^11.10.4"
+    "@emotion/styled" "^11.10.4"
+    "@fontsource/roboto" "^4.5.8"
+    "@mui/icons-material" "^5.10.6"
+    "@mui/material" "^5.10.8"
+    "@mui/styled-engine-sc" "^5.10.6"
     "@testing-library/jest-dom" "^5.16.5"
     "@testing-library/react" "^13.4.0"
     "@testing-library/user-event" "^13.5.0"
@@ -4020,6 +4026,7 @@
     "react" "^18.2.0"
     "react-dom" "^18.2.0"
     "react-scripts" "5.0.1"
+    "styled-components" "^5.3.6"
     "typescript" "^4.8.4"
     "web-vitals" "^2.1.4"
 
@@ -9314,7 +9321,7 @@
   "resolved" "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.2.tgz"
   "version" "2.2.2"
 
-"nx@^14.8.2", "nx@>=14.6.1 < 16", "nx@14.8.2":
+"nx@>=14.6.1 < 16", "nx@14.8.2":
   "integrity" "sha512-pPijBoeybsIlCD8FMH8WTns+pcIL+0ZOh/+otUX2LfVsi+ppH33GUxO9QVLPrLcyGaoHhwil4hYBxPIQ7Z1r2g=="
   "resolved" "https://registry.npmjs.org/nx/-/nx-14.8.2.tgz"
   "version" "14.8.2"

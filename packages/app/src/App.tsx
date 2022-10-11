@@ -1,20 +1,15 @@
-import React from 'react'
-import Button from '@mui/material/Button'
-import logo from './logo.svg'
+import React, { MouseEventHandler, useState } from 'react'
 import './App.css'
+import Main from './Main'
+import SignIn from './SignIn'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Button variant="contained">새로 만든 버튼이에용</Button>
-      </header>
-    </div>
-  )
+const App = () => {
+  const buttonCallback: MouseEventHandler = (e) => {
+    setPage(SignIn)
+  }
+  const [page, setPage] = useState(Main(buttonCallback))
+
+  return <>{page}</>
 }
 
 export default App

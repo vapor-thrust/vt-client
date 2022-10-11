@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/**/*"
   ],
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -23,7 +23,5 @@
     "prepare": "husky install",
     "start": "yarn workspace app start"
   },
-  "dependencies": {
-    "nx": "^14.8.2"
-  }
+  "dependencies": {}
 }
