@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import TextField from '@mui/material/TextField'
 import Container from '@mui/material/Container'
@@ -9,20 +9,24 @@ import Button from '@mui/material/Button'
 const theme = createTheme()
 
 function App() {
-  // const ref = useRef()
+  const [result, setResult] = useState('')
+
   const submit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     const data = new FormData(event.currentTarget)
-    console.log(data.get('a'))
+    const body = JSON.stringify({ a: data.get('a'), b: data.get('b') })
 
-    fetch('0.0.0.0/oper', {
+    fetch('http://localhost:8000/oper', {
       method: 'POST',
-      body: JSON.stringify({
-        a: data.get('a'),
-        b: data.get('b'),
-      }),
+      body,
     })
+      .then((response) =>
+        response.json().catch(() => {
+          return { res: 'wtf' }
+        })
+      )
+      .then((json) => setResult(JSON.stringify(json)))
   }
 
   return (
@@ -41,6 +45,7 @@ function App() {
             get
           </Button>
         </Box>
+        <TextField fullWidth disabled value={result}></TextField>
       </Container>
     </ThemeProvider>
   )
